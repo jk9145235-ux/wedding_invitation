@@ -149,6 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- Step 3: invitation.mp4 plays once, then settles on invitation.png -
+  const scrollHint = document.getElementById('scrollHint');
+  let scrollHintListenersAttached = false;
+
+  function hideScrollHint() {
+    if (!scrollHint) return;
+    scrollHint.classList.remove('is-visible');
+    scrollHint.classList.add('is-hidden');
+  }
+
   invitationVideo.addEventListener('ended', () => {
     invitationImage.classList.add('is-active');
 
@@ -157,8 +166,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // down into the website; bgMusic is untouched and keeps playing.
     document.documentElement.classList.add('is-unlocked');
     document.body.classList.add('is-unlocked');
-  });
 
+    // Show the scroll hint now that the site is unlocked. Purely visual —
+    // it never touches scroll behavior itself.
+    if (scrollHint) {
+      scrollHint.classList.add('is-visible');
+
+      if (!scrollHintListenersAttached) {
+        scrollHintListenersAttached = true;
+        window.addEventListener('scroll', hideScrollHint, { once: true, passive: true });
+        window.addEventListener('touchstart', hideScrollHint, { once: true, passive: true });
+      }
+    }
+  });
   initScrollReveal();
   initScratchCard();
   initWalimaCountdown();

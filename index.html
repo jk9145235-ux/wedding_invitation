@@ -44,7 +44,12 @@
         <div id="invitationGlow"></div>
         <!-- Crossfades in once invitation.mp4 finishes, and stays visible -->
         <img id="invitationImage" class="frame__media invitation-image" src="assets/invitation.png" alt="Wedding invitation for Aaftab Khan and Alfiya Sheikh" />
-      </div>
+
+        <!-- Appears only after invitationVideo ends; hides on first scroll/touch -->
+ <div id="scrollHint" class="scroll-hint" aria-hidden="true">
+  <span class="scroll-hint__text">scroll to explore</span>
+  <span class="scroll-hint__arrow">↓</span>
+</div>
     </section>
 
   </div>
