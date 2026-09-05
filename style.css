@@ -87,8 +87,8 @@ html, body {
   display: block;
 }
 
-/* intro.mp4 is 1280x720 (16:9), landscape */
-.frame--landscape {
+/* intro.mp4 is 1280x720 (16:9), portrait */
+.frame--portrait {
   width: 100%;
   max-width: 100vw;
   aspect-ratio: 16 / 9;
