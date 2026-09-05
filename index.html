@@ -1,480 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AAFTAB ♥ ALFIYA</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Aaftab &amp; Alfiya — Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div id="loader">
-
-<div class="loader-content">
-
-<h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</h2>
-
-<p>Loading Invitation...</p>
-
-</div>
-
-</div>
-
-<audio id="music" loop>
-
-<source src="assets/music.mp3">
-
-</audio>
-
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<h3>Together With Their Families</h3>
-
-<h1>AAFTAB KHAN</h1>
-
-<span>&</span>
-
-<h1>ALFIYA SHEIKH</h1>
-
-<p>Request the honour of your presence</p>
-
-<button id="openInvite">
-
-Open Invitation
-
-</button>
-
-</div>
-
-</section>
-<section class="scratch-section">
-
-<h2>Reveal Our Big Day</h2>
-
-<div id="scratchCard">
-
-<div class="cover">
-
-Scratch Here ✨
-
-</div>
-
-<div class="hidden-date">
-
-💍 NIKKAH
-
-<br>
-
-17 November 2026
-
-</div>
-
-</div>
-
-</section>
-<section class="countdown">
-
-<h2>Countdown To Nikkah</h2>
-
-<div class="timer">
-
-<div>
-
-<h1 id="days">00</h1>
-
-<p>Days</p>
-
-</div>
-
-<div>
-
-<h1 id="hours">00</h1>
-
-<p>Hours</p>
-
-</div>
-
-<div>
-
-<h1 id="minutes">00</h1>
-
-<p>Minutes</p>
-
-</div>
-
-<div>
-
-<h1 id="seconds">00</h1>
-
-<p>Seconds</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- ===============================
-     LOVE STORY
-================================ -->
-
-<section class="story" id="story">
-
-<div class="section-title">
-    <h2>Our Journey</h2>
-    <p>Every beautiful story begins with a single moment written by Allah.</p>
-</div>
-
-<div class="story-container">
-
-<div class="story-card">
-<span>✨</span>
-<h3>First Chapter</h3>
-<p>
-Every journey begins with a beautiful destiny.
-What Allah has written is always the best.
-</p>
-</div>
-
-<div class="story-card">
-<span>🤍</span>
-<h3>Families United</h3>
-<p>
-Two families come together with love,
-respect and countless duas.
-</p>
-</div>
-
-<div class="story-card">
-<span>💍</span>
-<h3>Forever Begins</h3>
-<p>
-On 17 November 2026,
-our forever starts with Nikah.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ===============================
-     EVENTS
-================================ -->
-
-<section class="events">
-
-<div class="section-title">
-
-<h2>Wedding Events</h2>
-
-<p>We would be honoured by your presence.</p>
-
-</div>
-
-<div class="event-grid">
-
-<div class="event-card">
-
-<div class="icon">
-
-💍
-
-</div>
-
-<h2>NIKKAH</h2>
-
-<h3>17 November 2026</h3>
-
-<p>
-
-Burhanpur
-
-</p>
-
-<a href="https://share.google/CYV2U3NDb0DTyyQWn" target="_blank">
-
-View Location
-
-</a>
-
-</div>
-
-<div class="event-card">
-
-<div class="icon">
-
-🌿
-
-</div>
-
-<h2>WALIMA</h2>
-
-<h3>18 November 2026</h3>
-
-<p>
-
-Aishwariya Garden
-
-<br>
-
-Indore
-
-</p>
-
-<a href="https://share.google/Ex0yNwp23uBJyrF91" target="_blank">
-
-View Location
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===============================
-     GALLERY
-================================ -->
-
-<section class="gallery">
-
-<div class="section-title">
-
-<h2>Gallery</h2>
-
-<p>Moments filled with elegance.</p>
-
-</div>
-
-<div class="gallery-grid">
-
-<img src="assets/gallery1.jpg">
-
-<img src="assets/gallery2.jpg">
-
-<img src="assets/gallery3.jpg">
-
-<img src="assets/gallery4.jpg">
-
-<img src="assets/gallery5.jpg">
-
-<img src="assets/gallery6.jpg">
-
-</div>
-
-</section>
-
-<!-- ===============================
-     QUOTE
-================================ -->
-
-<section class="quote">
-
-<h2>
-
-"And among His signs is that He created for you mates from among yourselves,
-
-that you may find tranquillity in them."
-
-</h2>
-
-<p>
-
-— Surah Ar-Rum (30:21)
-
-</p>
-
-</section>
-<!-- =========================
-        RSVP SECTION
-========================= -->
-
-<section class="rsvp" id="rsvp">
-
-<div class="section-title">
-
-<h2>RSVP</h2>
-
-<p>Kindly let us know if you will be joining us.</p>
-
-</div>
-
-<form class="rsvp-form">
-
-<input
-type="text"
-placeholder="Your Name"
-required>
-
-<input
-type="number"
-placeholder="Number of Guests"
-required>
-
-<select required>
-
-<option value="">
-Will you attend?
-</option>
-
-<option>
-Yes, In Sha Allah
-</option>
-
-<option>
-Sorry, I Can't Attend
-</option>
-
-</select>
-
-<textarea
-placeholder="Leave your blessings for the couple..."
-rows="5"></textarea>
-
-<button type="submit">
-
-Send RSVP
-
-</button>
-
-</form>
-
-</section>
-
-<!-- =========================
-        MUSIC BUTTON
-========================= -->
-
-<button id="musicBtn">
-
-🎵
-
-</button>
-
-<!-- =========================
-      FLOATING FLOWERS
-========================= -->
-
-<div class="flowers">
-
-<span>🌸</span>
-<span>🤍</span>
-<span>🌿</span>
-<span>🌸</span>
-<span>✨</span>
-<span>🌿</span>
-
-</div>
-
-<!-- =========================
-     ADD TO CALENDAR
-========================= -->
-
-<section class="calendar">
-
-<h2>
-
-Save The Date
-
-</h2>
-
-<p>
-
-Don't forget our special day.
-
-</p>
-
-<a
-class="calendar-btn"
-href="#">
-
-📅 Add To Calendar
-
-</a>
-
-</section>
-
-<!-- =========================
-     THANK YOU
-========================= -->
-
-<section class="thankyou">
-
-<h2>
-
-We Can't Wait To Celebrate
-With You
-
-</h2>
-
-<p>
-
-Your presence and duas
-will make our day even
-more memorable.
-
-</p>
-
-<h3>
-
-AAFTAB
-
-<span>&</span>
-
-ALFIYA
-
-</h3>
-
-</section>
-
-<!-- =========================
-        FOOTER
-========================= -->
-
-<footer>
-
-<p>
-
-Made With 🤍
-
-For Our Family & Friends
-
-</p>
-
-<p>
-
-© 2026
-
-AAFTAB KHAN
-
-&
-
-ALFIYA SHEIKH
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <div id="stage">
+
+    <!-- SCREEN 1: closed envelope, waiting for the wax seal to be tapped -->
+    <section id="envelope-screen" class="screen is-active">
+      <div class="frame frame--landscape">
+        <img id="envelopePoster" class="frame__media" src="assets/intro-poster.jpg" alt="Wedding invitation envelope with a gold wax seal" />
+        <!-- Invisible clickable area positioned exactly over the wax seal -->
+        <button id="sealButton" class="seal-button" type="button" aria-label="Open the invitation"></button>
+        <p id="tapHint" class="tap-hint">Tap the seal to open</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: the 10 second cinematic intro video -->
+    <section id="intro-screen" class="screen">
+      <div class="frame frame--landscape">
+        <video id="introVideo" class="frame__media" src="assets/intro.mp4" playsinline preload="auto"></video>
+        <!-- Warm radial bloom used only at the transition moment -->
+        <div id="bloom"></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: the animated Canva invitation -->
+    <section id="invitation-screen" class="screen">
+      <div class="frame frame--portrait">
+        <video
+          id="invitationVideo"
+          class="frame__media"
+          src="assets/invitation.mp4"
+          playsinline
+          muted
+          preload="auto"
+        ></video>
+        <!-- Warm golden glow that washes over the invitation as it's revealed -->
+        <div id="invitationGlow"></div>
+        <!-- Crossfades in once invitation.mp4 finishes, and stays visible -->
+        <img id="invitationImage" class="frame__media invitation-image" src="assets/invitation.png" alt="Wedding invitation for Aaftab Khan and Alfiya Sheikh" />
+      </div>
+    </section>
+
+  </div>
+
+  <audio id="bgMusic" src="assets/bi-sahara.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
+  <main id="website" aria-label="Wedding website">
+
+    <!-- 1. Quranic Ayat -->
+    <section id="ayat" class="site-section">
+      <div class="site-section__inner reveal">
+        <svg class="ornament ornament--corner" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M4 4c10 0 18 8 18 18M4 4c0 10 8 18 18 18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="4" cy="4" r="2.4" fill="currentColor"/>
+        </svg>
+        <p class="ayat-arabic" lang="ar" dir="rtl">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="ayat-translation">"And among His signs is that He created for you spouses from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy."</p>
+        <p class="ayat-reference">Surah Ar-Rum · 30:21</p>
+      </div>
+    </section>
+
+    <!-- 2. A Little Surprise — Scratch & Reveal -->
+    <section id="scratch-reveal" class="site-section site-section--tinted">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">A Little Surprise</p>
+        <h2 class="section-heading">Scratch &amp; Reveal</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="scratch-card" id="scratchCard">
+          <div class="scratch-card__reveal">
+            <p class="scratch-card__label">You're Invited</p>
+            <p class="scratch-card__on">on</p>
+            <p class="scratch-card__date">18 November 2026</p>
+          </div>
+          <canvas id="scratchCanvas" class="scratch-card__canvas" aria-hidden="true"></canvas>
+        </div>
+        <button type="button" id="scratchFallback" class="scratch-card__fallback">Tap to reveal</button>
+        <p class="scratch-card__hint" id="scratchHint">Scratch the card to reveal the date</p>
+      </div>
+    </section>
+
+    <!-- 3. Welcome Message -->
+    <section id="welcome" class="site-section">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">Our Invitation</p>
+        <h2 class="section-heading">Dear Family &amp; Friends</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="welcome-message">
+          By the grace of Allah, we joyfully invite you to be a part of our wedding celebrations.
+          Your presence, prayers, and blessings would mean the world to us as we begin this new
+          journey together, InshaAllah.
+        </p>
+        <p class="welcome-signature">With love,<br /><span>Aaftab &amp; Alfiya</span></p>
+      </div>
+    </section>
+
+    <!-- 4. Decorative Couple Banner -->
+    <section id="couple-banner" class="site-section site-section--banner">
+      <div class="banner-media reveal">
+        <img src="assets/couple-banner.jpg" alt="Aaftab and Alfiya" class="banner-media__image" />
+        <div class="banner-media__overlay">
+          <svg class="ornament ornament--divider-lg" viewBox="0 0 200 40" aria-hidden="true" focusable="false">
+            <line x1="0" y1="20" x2="80" y2="20" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="20" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <p class="banner-media__text">May Allah Bless This Union</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Wedding Events -->
+    <section id="wedding-events" class="site-section">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">Celebrating Together</p>
+        <h2 class="section-heading">Wedding Events</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="event-grid">
+          <article class="event-card reveal">
+            <svg class="event-card__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3 class="event-card__name">Haldi</h3>
+            <p class="event-card__date">15 November 2026 · Sunday</p>
+            <p class="event-card__time">5:00 PM</p>
+          </article>
+
+          <article class="event-card reveal">
+            <svg class="event-card__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3 class="event-card__name">Flower Ceremony</h3>
+            <p class="event-card__date">16 November 2026 · Monday</p>
+            <p class="event-card__time">7:00 PM</p>
+          </article>
+
+          <article class="event-card reveal">
+            <svg class="event-card__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3 class="event-card__name">Nikah</h3>
+            <p class="event-card__date">17 November 2026 · Tuesday</p>
+            <p class="event-card__time">11:30 AM</p>
+          </article>
+
+          <article class="event-card reveal">
+            <svg class="event-card__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3 class="event-card__name">Walima</h3>
+            <p class="event-card__date">18 November 2026 · Wednesday</p>
+            <p class="event-card__time">7:00 PM</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Walima Countdown -->
+    <section id="walima-countdown" class="site-section site-section--tinted">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">Save The Date</p>
+        <h2 class="section-heading">Counting Down</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="countdown-card">
+          <svg class="ornament ornament--crescent" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 3a9 9 0 100 18 9 9 0 01-9-9 9 9 0 019-9z" fill="currentColor"/>
+          </svg>
+          <div class="countdown-grid" role="timer" aria-live="polite" aria-atomic="true">
+            <div class="countdown-unit"><span class="countdown-unit__value" id="cdDays">00</span><span class="countdown-unit__label">Days</span></div>
+            <div class="countdown-unit"><span class="countdown-unit__value" id="cdHours">00</span><span class="countdown-unit__label">Hours</span></div>
+            <div class="countdown-unit"><span class="countdown-unit__value" id="cdMinutes">00</span><span class="countdown-unit__label">Minutes</span></div>
+            <div class="countdown-unit"><span class="countdown-unit__value" id="cdSeconds">00</span><span class="countdown-unit__label">Seconds</span></div>
+          </div>
+          <p class="countdown-caption">Until our Walima on Wednesday, 18 November 2026 at 7:00 PM</p>
+          <p class="countdown-inshallah">InshaAllah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Nikah Venue -->
+    <section id="nikah-venue" class="site-section">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">Where To Find Us</p>
+        <h2 class="section-heading">Nikah Venue</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="venue-card">
+          <img src="assets/nikah-venue.jpg" alt="Jama Masjid, Burhanpur" class="venue-card__image" />
+          <a class="venue-map" href="https://maps.app.goo.gl/SEZ8xAmAgxBbWKcB8" target="_blank" rel="noopener" aria-label="Open Jama Masjid, Burhanpur in Google Maps">
+            <span class="venue-map__frame">
+              <iframe
+                class="venue-map__iframe"
+                src="https://maps.google.com/maps?q=21.3096341,76.232692&z=16&output=embed"
+                loading="lazy"
+                tabindex="-1"
+                aria-hidden="true"
+                title="Map preview of Jama Masjid"
+              ></iframe>
+            </span>
+          </a>
+          <div class="venue-card__body">
+            <h3 class="venue-card__name">Jama Masjid</h3>
+            <p class="venue-card__address">Jama Masjid, Burhanpur, Madhya Pradesh</p>
+            <p class="venue-card__datetime">Tuesday, 17 November 2026 · 11:30 AM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Walima Venue -->
+    <section id="walima-venue" class="site-section site-section--tinted">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">Where To Find Us</p>
+        <h2 class="section-heading">Walima Venue</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="venue-card">
+          <img src="assets/walima-venue.jpg" alt="New Aishwarya Garden" class="venue-card__image" />
+          <a class="venue-map" href="https://maps.app.goo.gl/NuLPucPLfSASUWT16" target="_blank" rel="noopener" aria-label="Open New Aishwarya Garden in Google Maps">
+            <span class="venue-map__frame">
+              <iframe
+                class="venue-map__iframe"
+                src="https://maps.google.com/maps?q=22.6804933,75.8643756&z=16&output=embed"
+                loading="lazy"
+                tabindex="-1"
+                aria-hidden="true"
+                title="Map preview of New Aishwarya Garden"
+              ></iframe>
+            </span>
+          </a>
+          <div class="venue-card__body">
+            <h3 class="venue-card__name">New Aishwarya Garden</h3>
+            <p class="venue-card__datetime">Wednesday, 18 November 2026 · 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Your Blessings -->
+    <section id="blessings" class="site-section">
+      <div class="site-section__inner reveal">
+        <p class="eyebrow">With Love</p>
+        <h2 class="section-heading">Your Blessings</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="blessings-intro">Your presence and your duas are the greatest gifts we could ask for.</p>
+
+        <div class="blessings-grid">
+          <div class="blessings-card reveal">
+            <svg class="blessings-card__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 4c6 4 10 8 10 14a10 10 0 01-20 0c0-6 4-10 10-14z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3>Your Presence</h3>
+            <p>Simply being with us to celebrate means more than words can say.</p>
+          </div>
+          <div class="blessings-card reveal">
+            <svg class="blessings-card__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 4c6 4 10 8 10 14a10 10 0 01-20 0c0-6 4-10 10-14z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <h3>Your Duas</h3>
+            <p>Keep us in your prayers as we begin this new chapter together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 10. For Location & Enquiries -->
+<section id="location-enquiries" class="site-section site-section--tinted">
+  <div class="site-section__inner reveal">
+    <p class="eyebrow">Get In Touch</p>
+    <h2 class="section-heading">For Location &amp; Enquiries</h2>
+    <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="tel:+919098708787">
+        <span class="contact-card__name">Abdul Gaffar</span>
+        <span class="contact-card__number">9098708787</span>
+      </a>
+
+      <a class="contact-card" href="tel:+919826062673">
+        <span class="contact-card__name">Yunus Khan</span>
+        <span class="contact-card__number">98260 62673</span>
+      </a>
+
+      <a class="contact-card" href="tel:+919752992892">
+        <span class="contact-card__name">Yusuf Khan</span>
+        <span class="contact-card__number">97529 92892</span>
+      </a>
+
+      <a class="contact-card" href="tel:+918770198554">
+        <span class="contact-card__name">Ibrahim Khan</span>
+        <span class="contact-card__number">87701 98554</span>
+      </a>
+
+      <a class="contact-card" href="tel:+918817401724">
+        <span class="contact-card__name">Zeeshan Khan</span>
+        <span class="contact-card__number">88174 01724</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- 11. Closing -->
+    <section id="closing" class="site-section site-section--closing">
+      <div class="site-section__inner reveal">
+        <svg class="ornament ornament--monogram" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="40" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <h2 class="closing-names">Aaftab <span class="closing-names__amp">&amp;</span> Alfiya</h2>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="closing-message">Thank you for being a part of our story. We can't wait to celebrate this beautiful beginning with you.</p>
+         <p class="closing-footer">17–18 November 2026 · Burhanpur-Indore, Madhya Pradesh</p>
+      </div>
+    </section>
+
+  </main>
+
+</parameter>

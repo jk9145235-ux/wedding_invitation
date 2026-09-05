@@ -1,1231 +1,795 @@
-/*======================================
-            GOOGLE FONTS
-======================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
-
-/*======================================
-              VARIABLES
-======================================*/
-
-:root{
-
---white:#ffffff;
-
---olive:#6f7c47;
-
---lightolive:#95a56a;
-
---gold:#c7a95b;
-
---cream:#faf8f3;
-
---dark:#1f1f1f;
-
---shadow:0 15px 40px rgba(0,0,0,.12);
-
-}
-
-/*======================================
-            RESET
-======================================*/
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:var(--cream);
-
-color:var(--dark);
-
-overflow-x:hidden;
-
-}
-
-/*======================================
-        CUSTOM SCROLLBAR
-======================================*/
-
-::-webkit-scrollbar{
-
-width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-background:#eee;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:linear-gradient(var(--olive),var(--gold));
-
-border-radius:50px;
-
-}
-
-/*======================================
-           LOADER
-======================================*/
-
-#loader{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100vh;
-
-background:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-z-index:99999;
-
-animation:fadeLoader 3s forwards;
-
-}
-
-.loader-content{
-
-text-align:center;
-
-}
-
-.loader-content h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:45px;
-
-color:var(--olive);
-
-margin-bottom:20px;
-
-}
-
-.loader-content p{
-
-letter-spacing:4px;
-
-color:#666;
-
-}
-
-@keyframes fadeLoader{
-
-0%{
-
-opacity:1;
-
-}
-
-90%{
-
-opacity:1;
-
-}
-
-100%{
-
-opacity:0;
-
-visibility:hidden;
-
-}
-
-}
-
-/*======================================
-            HERO
-======================================*/
-
-.hero{
-
-height:100vh;
-
-background:url("assets/hero.jpg") center/cover no-repeat;
-
-position:relative;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-}
-
-.overlay{
-
-position:absolute;
-
-inset:0;
-
-background:rgba(255,255,255,.45);
-
-backdrop-filter:blur(3px);
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:5;
-
-padding:50px;
-
-background:rgba(255,255,255,.45);
-
-backdrop-filter:blur(18px);
-
-border-radius:25px;
-
-box-shadow:var(--shadow);
-
-max-width:700px;
-
-}
-
-.hero-content h3{
-
-font-weight:400;
-
-letter-spacing:4px;
-
-margin-bottom:25px;
-
-color:#555;
-
-}
-
-.hero-content h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:72px;
-
-font-weight:700;
-
-color:var(--olive);
-
-margin:10px 0;
-
-}
-
-.hero-content span{
-
-display:block;
-
-font-size:55px;
-
-color:var(--gold);
-
-margin:10px;
-
-}
-
-.hero-content p{
-
-margin-top:20px;
-
-font-size:18px;
-
-letter-spacing:2px;
-
-}
-
-#openInvite{
-
-margin-top:40px;
-
-padding:18px 45px;
-
-border:none;
-
-background:linear-gradient(135deg,var(--olive),var(--gold));
-
-color:white;
-
-border-radius:50px;
-
-cursor:pointer;
-
-font-size:17px;
-
-transition:.4s;
-
-box-shadow:var(--shadow);
-
-}
-
-#openInvite:hover{
-
-transform:translateY(-6px);
-
-}
-
-/*======================================
-      SECTION TITLE
-======================================*/
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:60px;
-
-}
-
-.section-title h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:58px;
-
-color:var(--olive);
-
-}
-
-.section-title p{
-
-margin-top:15px;
-
-font-size:18px;
-
-color:#666;
-
-}
-/*======================================
-        SCRATCH CARD
-======================================*/
-
-.scratch-section{
-
-padding:120px 20px;
-
-text-align:center;
-
-background:linear-gradient(180deg,#ffffff,#faf8f2);
-
-}
-
-.scratch-section h2{
-
-font-size:55px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:var(--olive);
-
-margin-bottom:60px;
-
-}
-
-#scratchCard{
-
-position:relative;
-
-width:420px;
-
-height:220px;
-
-margin:auto;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:var(--shadow);
-
-background:white;
-
-}
-
-.cover{
-
-position:absolute;
-
-inset:0;
-
-background:linear-gradient(135deg,var(--olive),var(--gold));
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:34px;
-
-font-weight:600;
-
-color:white;
-
-cursor:pointer;
-
-transition:.6s;
-
-z-index:2;
-
-}
-
-.hidden-date{
-
-position:absolute;
-
-inset:0;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:45px;
-
-background:white;
-
-color:var(--olive);
-
-}
-
-.cover:hover{
-
-opacity:.1;
-
-}
-
-/*======================================
-        COUNTDOWN
-======================================*/
-
-.countdown{
-
-padding:120px 20px;
-
-text-align:center;
-
-background:var(--cream);
-
-}
-
-.countdown h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:60px;
-
-color:var(--olive);
-
-margin-bottom:60px;
-
-}
-
-.timer{
-
-display:flex;
-
-justify-content:center;
-
-gap:35px;
-
-flex-wrap:wrap;
-
-}
-
-.timer div{
-
-background:white;
-
-width:180px;
-
-padding:40px 20px;
-
-border-radius:25px;
-
-box-shadow:var(--shadow);
-
-transition:.4s;
-
-}
-
-.timer div:hover{
-
-transform:translateY(-10px);
-
-}
-
-.timer h1{
-
-font-size:58px;
-
-color:var(--gold);
-
-font-family:'Cormorant Garamond',serif;
-
-}
-
-.timer p{
-
-margin-top:12px;
-
-letter-spacing:3px;
-
-color:#777;
-
-}
-
-/*======================================
-        STORY SECTION
-======================================*/
-
-.story{
-
-padding:120px 8%;
-
-background:white;
-
-}
-
-.story-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:35px;
-
-margin-top:60px;
-
-}
-
-.story-card{
-
-background:var(--cream);
-
-padding:45px;
-
-border-radius:22px;
-
-text-align:center;
-
-box-shadow:var(--shadow);
-
-transition:.4s;
-
-}
-
-.story-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.story-card span{
-
-font-size:55px;
-
-display:block;
-
-margin-bottom:25px;
-
-}
-
-.story-card h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:34px;
-
-margin-bottom:20px;
-
-color:var(--olive);
-
-}
-
-.story-card p{
-
-line-height:1.9;
-
-color:#666;
-
-}
-
-/*======================================
-          EVENTS
-======================================*/
-
-.events{
-
-padding:120px 8%;
-
-background:#fdfdfd;
-
-}
-
-.event-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:40px;
-
-margin-top:60px;
-
-}
-
-.event-card{
-
-background:white;
-
-border-radius:25px;
-
-padding:50px;
-
-text-align:center;
-
-box-shadow:var(--shadow);
-
-transition:.4s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.event-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:6px;
-
-background:linear-gradient(90deg,var(--gold),var(--olive));
-
-}
-
-.event-card:hover{
-
-transform:translateY(-12px);
-
-}
-
-.event-card .icon{
-
-font-size:70px;
-
-margin-bottom:20px;
-
-}
-
-.event-card h2{
-
-font-size:40px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:var(--olive);
-
-margin-bottom:15px;
-
-}
-
-.event-card h3{
-
-font-size:22px;
-
-color:var(--gold);
-
-margin-bottom:20px;
-
-}
-
-.event-card p{
-
-line-height:1.8;
-
-color:#666;
-
-margin-bottom:25px;
-
-}
-
-.event-card a{
-
-display:inline-block;
-
-padding:15px 35px;
-
-background:linear-gradient(135deg,var(--olive),var(--gold));
-
-color:white;
-
-text-decoration:none;
-
-border-radius:40px;
-
-transition:.3s;
-
-}
-
-.event-card a:hover{
-
-transform:scale(1.05);
-
-}
-/*======================================
-            GALLERY
-======================================*/
-
-.gallery{
-
-padding:120px 8%;
-
-background:var(--cream);
-
-}
-
-.gallery-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-margin-top:60px;
-
-}
-
-.gallery-grid img{
-
-width:100%;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:25px;
-
-box-shadow:var(--shadow);
-
-transition:.5s;
-
-cursor:pointer;
-
-}
-
-.gallery-grid img:hover{
-
-transform:scale(1.06) rotate(1deg);
-
-}
-
-/*======================================
-            QURAN VERSE
-======================================*/
-
-.quote{
-
-padding:140px 10%;
-
-text-align:center;
-
-background:white;
-
-}
-
-.quote h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:48px;
-
-font-weight:500;
-
-line-height:1.6;
-
-color:var(--olive);
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-.quote p{
-
-margin-top:30px;
-
-font-size:20px;
-
-letter-spacing:2px;
-
-color:var(--gold);
-
-}
-
-/*======================================
-              RSVP
-======================================*/
-
-.rsvp{
-
-padding:120px 8%;
-
-background:#faf8f2;
-
-}
-
-.rsvp-form{
-
-max-width:700px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:22px;
-
-}
-
-.rsvp-form input,
-
-.rsvp-form textarea,
-
-.rsvp-form select{
-
-padding:18px;
-
-font-size:17px;
-
-border:none;
-
-outline:none;
-
-background:white;
-
-border-radius:15px;
-
-box-shadow:var(--shadow);
-
-font-family:Poppins,sans-serif;
-
-}
-
-.rsvp-form button{
-
-padding:18px;
-
-background:linear-gradient(135deg,var(--olive),var(--gold));
-
-color:white;
-
-border:none;
-
-border-radius:50px;
-
-font-size:18px;
-
-cursor:pointer;
-
-transition:.35s;
-
-}
-
-.rsvp-form button:hover{
-
-transform:translateY(-5px);
-
-}
-
-/*======================================
-        MUSIC BUTTON
-======================================*/
-
-#musicBtn{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:70px;
-
-height:70px;
-
-border:none;
-
-border-radius:50%;
-
-background:linear-gradient(135deg,var(--olive),var(--gold));
-
-color:white;
-
-font-size:28px;
-
-cursor:pointer;
-
-box-shadow:var(--shadow);
-
-z-index:999;
-
-transition:.3s;
-
-}
-
-#musicBtn:hover{
-
-transform:scale(1.1);
-
-}
-
-/*======================================
-      CALENDAR BUTTON
-======================================*/
-
-.calendar{
-
-padding:100px 20px;
-
-text-align:center;
-
-background:white;
-
-}
-
-.calendar h2{
-
-font-size:52px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:var(--olive);
-
-}
-
-.calendar p{
-
-margin:20px 0;
-
-font-size:18px;
-
-color:#666;
-
-}
-
-.calendar-btn{
-
-display:inline-block;
-
-padding:18px 45px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-background:linear-gradient(135deg,var(--gold),var(--olive));
-
-color:white;
-
-font-size:18px;
-
-transition:.4s;
-
-}
-
-.calendar-btn:hover{
-
-transform:translateY(-6px);
-
-}
-
-/*======================================
-      THANK YOU
-======================================*/
-
-.thankyou{
-
-padding:150px 20px;
-
-text-align:center;
-
-background:linear-gradient(#fff,#f4f2e8);
-
-}
-
-.thankyou h2{
-
-font-size:58px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:var(--olive);
-
-margin-bottom:30px;
-
-}
-
-.thankyou p{
-
-font-size:20px;
-
-max-width:700px;
-
-margin:auto;
-
-line-height:1.9;
-
-color:#666;
-
-}
-
-.thankyou h3{
-
-margin-top:60px;
-
-font-size:62px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:var(--gold);
-
-}
-
-.thankyou span{
-
-margin:0 20px;
-
-color:var(--olive);
-
-}
-
-/*======================================
-          FOOTER
-======================================*/
-
-footer{
-
-padding:50px 20px;
-
-text-align:center;
-
-background:#1f1f1f;
-
-color:white;
-
-line-height:2;
-
-letter-spacing:1px;
-
-}
-
-/*======================================
-     FLOATING FLOWERS
-======================================*/
-
-.flowers{
-
-pointer-events:none;
-
-}
-
-.flowers span{
-
-position:fixed;
-
-font-size:28px;
-
-opacity:.5;
-
-animation:floatFlower 15s linear infinite;
-
-}
-
-.flowers span:nth-child(1){
-
-left:5%;
-
-animation-delay:0s;
-
-}
-
-.flowers span:nth-child(2){
-
-left:20%;
-
-animation-delay:3s;
-
-}
-
-.flowers span:nth-child(3){
-
-left:45%;
-
-animation-delay:6s;
-
-}
-
-.flowers span:nth-child(4){
-
-left:65%;
-
-animation-delay:9s;
-
-}
-
-.flowers span:nth-child(5){
-
-left:82%;
-
-animation-delay:12s;
-
-}
-
-.flowers span:nth-child(6){
-
-left:93%;
-
-animation-delay:15s;
-
-}
-
-@keyframes floatFlower{
-
-0%{
-
-transform:translateY(110vh) rotate(0deg);
-
-}
-
-100%{
-
-transform:translateY(-20vh) rotate(360deg);
-
-}
-
-}
-
-/*======================================
-      MOBILE RESPONSIVE
-======================================*/
-
-@media(max-width:768px){
-
-.hero-content{
-
-padding:35px 20px;
-
-}
-
-.hero-content h1{
-
-font-size:42px;
-
-}
-
-.hero-content span{
-
-font-size:40px;
-
-}
-
-.section-title h2{
-
-font-size:42px;
-
-}
-
-.timer{
-
-gap:15px;
-
-}
-
-.timer div{
-
-width:140px;
-
-padding:25px;
-
-}
-
-.gallery-grid img{
-
-height:260px;
-
-}
-
-.quote h2{
-
-font-size:34px;
-
-}
-
-.thankyou h2{
-
-font-size:40px;
-
-}
-
-.thankyou h3{
-
-font-size:42px;
-
-}
-
-#scratchCard{
-
-width:320px;
-
-height:180px;
-
-}
-
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* this is a full-screen experience, not a scrolling page */
+  background: #beb0a5; /* sampled from the intro video's background tone */
+  font-family: Georgia, 'Times New Roman', serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ==========================================================================
+   Stage: holds all screens, one is visible at a time
+   ========================================================================== */
+
+#stage {
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  background: #beb0a5;
+}
+
+.screen.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Intro sits above the invitation screen so it can crossfade-dissolve and
+   visually "reveal" the invitation underneath it, instead of a hard cut. */
+#envelope-screen { z-index: 1; }
+#invitation-screen { z-index: 1; }
+#intro-screen { z-index: 2; }
+
+/* While the transition is running, the intro layer fades out on its own
+   (slower + eased) instead of the generic screen fade, and stops intercepting
+   clicks straight away. A touch of blur is added as it dissolves, so the
+   light feels like it's diffusing outward rather than simply going
+   transparent — closer to a real cinematic dissolve. */
+#intro-screen.is-transitioning-out {
+  transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Media frames
+   A "frame" locks the exact aspect ratio of the video it holds.
+   Because the box ratio matches the video's real ratio, percentage
+   positions placed inside it (like the wax-seal button) line up with
+   the video's pixels on every screen size, with no cropping.
+   ========================================================================== */
+
+.frame {
+  position: relative;
+  margin: 0 auto;
+}
+
+.frame__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* intro.mp4 is 1280x720 (16:9), landscape */
+.frame--landscape {
+  width: 100%;
+  max-width: 100vw;
+  aspect-ratio: 16 / 9;
+  max-height: 86dvh;
+}
+
+/* invitation.mp4 is 2160x3840 (9:16), portrait — full screen on mobile */
+.frame--portrait {
+  height: 100dvh;
+  aspect-ratio: 9 / 16;
+  max-width: 100vw;
+}
+
+/* invitation.png crossfades in on top of invitation.mp4 once it finishes,
+   and stays visible. */
+.invitation-image {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.invitation-image.is-active {
+  opacity: 1;
+}
+
+/* Invitation reveal: while the light from intro.mp4 is dissolving away,
+   invitation.mp4 itself briefly runs brighter/warmer, then smoothly settles
+   back to its normal appearance. This is temporary only — once the
+   animation finishes the video looks exactly as it did before. */
+#invitationVideo.is-revealing {
+  animation: invitationRevealBrightness 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes invitationRevealBrightness {
+  0% {
+    filter: brightness(2.4) saturate(1.2) sepia(0.35);
+  }
+  35% {
+    filter: brightness(1.85) saturate(1.15) sepia(0.22);
+  }
+  70% {
+    filter: brightness(1.25) saturate(1.05) sepia(0.08);
+  }
+  100% {
+    filter: brightness(1) saturate(1) sepia(0);
+  }
+}
+
+/* A soft warm wash layered directly over the invitation video, reinforcing
+   the "illuminated by the envelope's light" feel as it clears. */
+#invitationGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 42%,
+    rgba(255, 253, 245, 0.9) 0%,
+    rgba(255, 241, 210, 0.55) 35%,
+    rgba(255, 232, 190, 0) 72%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#invitationGlow.is-revealing {
+  animation: invitationGlowFade 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes invitationGlowFade {
+  0% { opacity: 0.95; }
+  60% { opacity: 0.45; }
+  100% { opacity: 0; }
+}
+
+/* ==========================================================================
+   Envelope screen
+   ========================================================================== */
+
+.seal-button {
+  position: absolute;
+  /* Positioned to match the gold wax seal in intro.mp4's first frame */
+  left: 42%;
+  top: 44%;
+  width: 16%;
+  height: 24%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 2;
+}
+
+.seal-button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 4px;
+}
+
+/* Sits just below the seal, never overlapping it */
+.tap-hint {
+  position: absolute;
+  left: 50%;
+  top: 72%;
+  transform: translate(-50%, 0);
+  margin: 0;
+  width: max-content;
+  max-width: 80%;
+  text-align: center;
+  color: #fffaf2;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.85rem, 2.6vw, 1.05rem);
+  font-style: italic;
+  text-shadow: 0 1px 4px rgba(90, 70, 40, 0.45), 0 0 18px rgba(255, 235, 190, 0.55);
+  opacity: 0.9;
+  animation: pulseGlow 2.4s ease-in-out infinite;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Disappears the instant the seal is tapped */
+.tap-hint.is-hidden {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.55;
+    text-shadow: 0 1px 4px rgba(90, 70, 40, 0.45), 0 0 10px rgba(255, 235, 190, 0.35);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 1px 4px rgba(90, 70, 40, 0.45), 0 0 22px rgba(255, 235, 190, 0.8);
+  }
+}
+
+/* ==========================================================================
+   Bloom — a warm expanding point of light used only at the transition
+   moment, layered over the frozen last frame of intro.mp4.
+   ========================================================================== */
+
+#bloom {
+  position: absolute;
+  left: 46%;
+  top: 50%;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%) scale(0.4);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 252, 1) 0%,
+    rgba(255, 250, 235, 0.98) 18%,
+    rgba(255, 240, 205, 0.75) 40%,
+    rgba(255, 230, 180, 0.32) 62%,
+    rgba(255, 225, 170, 0) 78%
+  );
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#bloom.is-blooming {
+  animation: bloomPulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes bloomPulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.7);
+  }
+  55% {
+    opacity: 0.88;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.6);
+  }
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .screen,
+  .tap-hint,
+  .invitation-image,
+  #intro-screen.is-transitioning-out {
+    transition: none;
+    animation: none;
+  }
+
+  #bloom.is-blooming {
+    animation: none;
+    opacity: 0;
+  }
+}
+/* ============================================================================
+   WEBSITE (post-invitation.png) — scroll unlock + new sections
+   Added without touching any rule above this point.
+   ============================================================================ */
+
+/* Scroll stays fully locked (unchanged) until this class is added by JS the
+   instant invitation.png appears. */
+html.is-unlocked,
+body.is-unlocked {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* ---- Design tokens, sampled from the existing footage/seal ---- */
+#website {
+  --site-cream: #faf6ef;
+  --site-cream-tint: #f3ece1;
+  --site-ivory: #fffdf8;
+  --site-taupe: #beb0a5;
+  --site-gold: #977757;
+  --site-gold-soft: rgba(151, 119, 87, 0.35);
+  --site-ink: #4a3f34;
+  --site-serif: Georgia, 'Times New Roman', serif;
+  --site-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  background: var(--site-cream);
+  color: var(--site-ink);
+  font-family: var(--site-serif);
+}
+
+.site-section {
+  padding: clamp(56px, 10vw, 96px) 20px;
+  background: var(--site-cream);
+}
+
+.site-section--tinted {
+  background: var(--site-cream-tint);
+}
+
+.site-section__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--site-gold);
+}
+
+.section-heading {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  color: var(--site-ink);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px auto 30px;
+  width: 160px;
+  color: var(--site-gold);
+}
+.divider span { flex: 1; height: 1px; background: currentColor; opacity: 0.55; }
+.divider i {
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.ornament { color: var(--site-gold); }
+.ornament--corner { width: 40px; height: 40px; margin: 0 auto 14px; }
+.ornament--crescent { width: 22px; height: 22px; margin: 0 auto 10px; opacity: 0.85; }
+.ornament--monogram { width: 56px; height: 56px; margin: 0 auto 16px; opacity: 0.9; }
+.ornament--divider-lg { width: 160px; height: auto; margin: 0 auto 14px; }
+
+/* Scroll-reveal: fades/slides in once a section enters the viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 1s var(--site-ease), transform 1s var(--site-ease);
+}
+.reveal.is-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- 1. Quranic Ayat ---- */
+.ayat-arabic {
+  font-size: clamp(1.3rem, 3.6vw, 1.7rem);
+  line-height: 2;
+  margin: 0 0 22px;
+  color: var(--site-ink);
+}
+.ayat-translation {
+  font-style: italic;
+  color: var(--site-ink);
+  opacity: 0.85;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+.ayat-reference {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--site-gold);
+  margin: 0;
+}
+
+/* ---- 2. Scratch & Reveal ---- */
+.scratch-card {
+  position: relative;
+  width: min(320px, 84vw);
+  aspect-ratio: 4 / 3;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(74, 63, 52, 0.18);
+  background: var(--site-ivory);
+}
+.scratch-card__reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 14px;
+}
+.scratch-card__label {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--site-ink);
+}
+.scratch-card__on {
+  margin: 2px 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--site-gold);
+}
+.scratch-card__date {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--site-ink);
+}
+.scratch-card__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  touch-action: none;
+  border-radius: 14px;
+}
+.scratch-card__fallback {
+  display: block;
+  margin: 0 auto 10px;
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 999px;
+  color: var(--site-ink);
+  font-family: var(--site-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.scratch-card__hint {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--site-ink);
+  opacity: 0.6;
+  margin: 0;
+  transition: opacity 0.5s ease;
+}
+.scratch-card__hint.is-hidden { opacity: 0; }
+
+/* ---- Scratch reveal celebration (added) ---- */
+.scratch-celebration {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scratch-celebration__glow {
+  position: absolute;
+  width: 55%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 245, 222, 0.95) 0%, rgba(201, 168, 116, 0.45) 45%, rgba(201, 168, 116, 0) 75%);
+  opacity: 0;
+  transform: scale(0.4);
+  animation: scratchGlowPulse 1.1s ease-out forwards;
+}
+
+@keyframes scratchGlowPulse {
+  0%   { opacity: 0;    transform: scale(0.3); }
+  35%  { opacity: 0.9;  transform: scale(1.1); }
+  100% { opacity: 0;    transform: scale(1.6); }
+}
+
+.scratch-celebration__spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--site-gold);
+  clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+  opacity: 0;
+  animation: scratchSparkFly 0.9s ease-out forwards;
+}
+
+@keyframes scratchSparkFly {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.4) rotate(0deg); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--sx), var(--sy)) scale(1) rotate(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scratch-celebration__glow,
+  .scratch-celebration__spark,
+  .scratch-celebration__confetti {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ---- Confetti-style celebration pieces (added) ---- */
+.scratch-celebration__confetti {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.3);
+  animation: scratchConfettiPop 1.1s ease-out forwards;
+  box-shadow: 0 1px 2px rgba(74, 63, 52, 0.15);
+}
+
+.scratch-celebration__confetti--diamond {
+  border-radius: 2px;
+}
+
+@keyframes scratchConfettiPop {
+  0%   { opacity: 0; transform: translateY(-6px) scale(0.3) rotate(0deg); }
+  22%  { opacity: 1; transform: translateY(2px) scale(1.15) rotate(25deg); }
+  100% { opacity: 0; transform: translateY(var(--fall)) scale(0.85) rotate(75deg); }
+}
+
+/* ---- 3. Welcome ---- */
+.welcome-message {
+  line-height: 1.9;
+  color: var(--site-ink);
+  margin: 0 0 22px;
+}
+.welcome-signature {
+  font-style: italic;
+  color: var(--site-gold);
+  line-height: 1.7;
+}
+.welcome-signature span {
+  font-style: normal;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---- 4. Couple banner ---- */
+.site-section--banner {
+  padding: 0;
+}
+.banner-media {
+  position: relative;
+  width: 100%;
+  min-height: min(70vh, 560px);
+  overflow: hidden;
+}
+.banner-media__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-media__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px 48px;
+  background: linear-gradient(180deg, rgba(74,63,52,0) 40%, rgba(41,33,25,0.55) 100%);
+  color: var(--site-ivory);
+}
+.banner-media__text {
+  margin: 0;
+  font-size: clamp(1.2rem, 3.4vw, 1.6rem);
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* ---- 5. Wedding Events ---- */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+.event-card {
+  background: var(--site-ivory);
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 12px;
+  padding: 24px 14px;
+  box-shadow: 0 8px 22px rgba(74, 63, 52, 0.08);
+}
+.event-card__icon { width: 28px; height: 28px; color: var(--site-gold); margin-bottom: 10px; }
+.event-card__name { margin: 0 0 6px; font-size: 1.05rem; font-weight: 400; }
+.event-card__date { margin: 0; font-size: 0.82rem; opacity: 0.75; }
+.event-card__time { margin: 4px 0 0; font-size: 0.82rem; color: var(--site-gold); }
+
+/* ---- 6. Countdown ---- */
+.countdown-card {
+  background: var(--site-ivory);
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 16px;
+  padding: 32px 20px;
+  box-shadow: 0 10px 26px rgba(74, 63, 52, 0.1);
+}
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 4vw, 22px);
+  margin-bottom: 16px;
+}
+.countdown-unit { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
+.countdown-unit__value { font-size: clamp(1.5rem, 6vw, 2.1rem); color: var(--site-ink); font-variant-numeric: tabular-nums; }
+.countdown-unit__label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--site-gold); margin-top: 2px; }
+.countdown-caption { margin: 0 0 6px; font-size: 0.88rem; opacity: 0.8; }
+.countdown-inshallah { margin: 0; font-style: italic; color: var(--site-gold); }
+
+/* ---- 7 & 8. Venue cards ---- */
+.venue-card {
+  display: block;
+  text-align: left;
+  background: var(--site-ivory);
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(74, 63, 52, 0.1);
+}
+.venue-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.venue-card__body { padding: 20px; }
+
+/* ---- Map preview (added) ---- */
+.venue-map {
+  position: relative;
+  display: block;
+  height: 170px;
+  overflow: hidden;
+  text-decoration: none;
+  border-top: 1px solid var(--site-gold-soft);
+  border-bottom: 1px solid var(--site-gold-soft);
+  transition: opacity 0.3s var(--site-ease);
+}
+.venue-map:hover,
+.venue-map:focus-visible {
+  opacity: 0.92;
+}
+.venue-map:focus-visible {
+  outline: 2px solid var(--site-gold);
+  outline-offset: -2px;
+}
+.venue-map__frame {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.venue-map__iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none; /* taps pass through to the wrapping link */
+}
+
+.venue-card__name { margin: 0 0 6px; font-size: 1.15rem; font-weight: 400; }
+.venue-card__address { margin: 0 0 8px; font-size: 0.86rem; opacity: 0.75; }
+.venue-card__datetime { margin: 0; font-size: 0.86rem; color: var(--site-gold); }
+
+/* ---- 9. Blessings ---- */
+.blessings-intro { line-height: 1.8; margin: 0 0 26px; }
+.blessings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+.blessings-card {
+  background: var(--site-ivory);
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 12px;
+  padding: 26px 16px;
+}
+.blessings-card__icon { width: 26px; height: 26px; color: var(--site-gold); margin-bottom: 10px; }
+.blessings-card h3 { margin: 0 0 8px; font-weight: 400; font-size: 1rem; }
+.blessings-card p { margin: 0; font-size: 0.85rem; line-height: 1.6; opacity: 0.8; }
+
+/* ---- 10. Location & Enquiries ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--site-ivory);
+  border: 1px solid var(--site-gold-soft);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s var(--site-ease);
+}
+.contact-card:hover,
+.contact-card:focus-visible {
+  transform: translateY(-2px);
+}
+.contact-card:focus-visible {
+  outline: 2px solid var(--site-gold);
+  outline-offset: 3px;
+}
+.contact-card__name { font-size: 0.92rem; }
+.contact-card__number { font-size: 0.85rem; color: var(--site-gold); letter-spacing: 0.02em; }
+
+/* ---- 11. Closing ---- */
+.site-section--closing {
+  background: var(--site-cream-tint);
+}
+.closing-names {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 6vw, 2.6rem);
+  letter-spacing: 0.02em;
+}
+.closing-names__amp { color: var(--site-gold); font-style: italic; margin: 0 6px; }
+.closing-message { line-height: 1.8; margin: 0 0 14px; }
+.closing-footer { margin: 0; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.65; }
+
+/* ---- Responsive: tablet / desktop ---- */
+@media (min-width: 720px) {
+  .site-section__inner { max-width: 720px; }
+  .event-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .blessings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 480px; margin: 0 auto; }
+  .contact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .venue-card__image { height: 220px; }
+}
+
+@media (min-width: 1000px) {
+  .site-section__inner { max-width: 820px; }
+}
+
+/* ---- Reduced motion: extend existing rule's intent to new content ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .venue-card,
+  .contact-card {
+    transition: none;
+  }
 }
